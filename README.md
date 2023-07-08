@@ -1,2 +1,2 @@
 # terraform-module
-own terraform module
+collection of terraform module
