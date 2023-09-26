@@ -6,8 +6,8 @@
 
 # network
 module "network" {
-  source               = "./network"
-  vpc_prefix           = var.vpc_prefix
+  source               = "./terraform-aws-vpc"
+  prefix           = var.prefix
   vpc_cidr             = var.vpc_cidr
   availability_zones   = var.availability_zones
   public_subnet_cidrs  = var.public_subnet_cidrs

@@ -9,7 +9,7 @@ variable "region" {}
 ################### VPC ###################
 ###########################################
 
-variable "vpc_prefix" {}
+variable "prefix" {}
 variable "vpc_cidr" {}
 variable "availability_zones" {}
 variable "public_subnet_cidrs" {}

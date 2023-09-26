@@ -3,6 +3,6 @@ resource "aws_vpc" "vpc" {
     enable_dns_hostnames = true
     
     tags = {
-        Name = "${var.vpc_prefix}-vpc"
+        Name = "${var.prefix}-vpc"
     }
 }

@@ -3,14 +3,14 @@ resource "aws_route_table" "public_rt" {
     vpc_id = aws_vpc.vpc.id
 
     tags = {
-        Name = "${var.vpc_prefix}-public-rt"
+        Name = "${var.prefix}-public-rt"
     }
 }
 resource "aws_route_table" "private_rt" {
     vpc_id = aws_vpc.vpc.id
 
     tags = {
-        Name = "${var.vpc_prefix}-private-rt"
+        Name = "${var.prefix}-private-rt"
     }
 }
 
