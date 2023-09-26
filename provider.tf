@@ -3,16 +3,15 @@ terraform {
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = "~> 4.0"
+      version = ">= 5.0, <=5.6"
     }
   }
 
   backend "s3" {
-    bucket         = "terraform-backend-wdb-test"
+    bucket         = "wdb-t101study-tfstate"
     key            = "test/terraform.tfstate"
     region         = "ap-northeast-2"
-    encrypt        = true
-    dynamodb_table = "terraform-lock"
+    dynamodb_table = "terraform-locks"
   }
 }
 
@@ -20,5 +19,3 @@ provider "aws" {
   region  = var.region
   profile = var.account_profile
 }
-
-data "aws_caller_identity" "current" {}
